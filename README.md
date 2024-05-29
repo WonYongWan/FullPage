@@ -145,8 +145,8 @@ body {
 	.fp_page_wrap {...}
 }
 ```
-#### footer 이슈
-footer의 경우 화면이 꽉 차지 않는 경우가 대부분 입니다.
+#### footer height 값
+footer의 경우 화면이 꽉 차지 않는 경우가 대부분 입니다. height값을 auto로 변경 해주세요.
 ```css
 /* layout.css */
 .fp_page_wrap footer.fp_page {
