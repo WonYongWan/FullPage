@@ -167,12 +167,14 @@ footer의 경우 화면이 꽉 차지 않는 경우가 대부분 입니다. heig
 # JP
 [製作のきっかけ](#製作のきっかけ)<br/>
 [HTMLの書き方](#HTMLの書き方)<br/>
+[CSSに関する説明](#CSSに関する説明)<br/>
 
 ## 製作のきっかけ
 既存に広く知られているfullpageライブラリを商業的に使用するためには費用を支払わなければならない部分がありましたが、これを無料で使用しようとする趣旨で製作することになりました。
 
 ## HTMLの書き方
 ### introduce
+fp_page_wrapは必須。あとは選択
 ```html
 <!-- header -->
 <!-- data-fpnumプロパティ&値を指定した後、該当ボタンをクリックすると、指定された値と同じページにスクロール移動。 0からスタート -->
@@ -233,4 +235,90 @@ footer의 경우 화면이 꽉 차지 않는 경우가 대부분 입니다. heig
   <!-- top move button -->
   <button type="button" class="fp_top_btn">text</button>
 </body>
+```
+## CSSに関する説明
+### 必須cssファイル
+layout.css<br/>
+reset.css (既存のreset.cssがあれば除外)
+
+### layout.css設定
+#### 時間設定
+ページスクロールの時間を自由に設定できます。
+```css
+.fp_page_wrap {
+  /* transitionを設定してください */
+  transition: .5s ease-in-out;
+}
+```
+
+### layout.css関連イシュー
+#### bodyの中にすぐ入れる場合
+既存のlayout.cssをそのまま使用。
+```html
+<!-- example -->
+<body>
+  <!-- header -->
+  <ul class="fp_menu_wrap">...</ul>
+  <!-- fullpage -->
+  <div class="fp_page_wrap">...</div>
+  <!-- navigation -->
+  <ul class="fp_nav_wrap">...</ul>
+  <!-- top move button -->
+  <button type="button" class="fp_top_btn">...</button>
+</body>
+```
+#### bodyの中をもう一度包み込む場合
+```html
+<!-- example -->
+<body>
+  <div class="wrap">
+    <!-- header -->
+    <ul class="fp_menu_wrap">...</ul>
+    <!-- fullpage -->
+    <div class="fp_page_wrap">...</div>
+    <!-- navigation -->
+    <ul class="fp_nav_wrap">...</ul>
+    <!-- top move button -->
+    <button type="button" class="fp_top_btn">...</button>
+  </div>
+</body>
+```
+layout.css修正またはlayout.scss修正後のコンパイル
+```js
+/* layout.css */
+body {
+  overflow: hidden;
+}
+.wrap {
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+/* layout.scss */
+body {
+  overflow: hidden;
+}
+
+.wrap {
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+	
+  .fp_page_wrap {...}
+}
+```
+#### footer height値
+footerの場合、画面がいっぱいにならない場合がほとんどです。 height値をautoに変更してください。
+```css
+/* layout.css */
+.fp_page_wrap footer.fp_page {
+  height: auto !important;
+}
+
+/* layout.css */
+.fp_page_wrap {
+  .fp_page {....}
+  footer.fp_page {
+    height: auto !important;
+  }
+}
 ```
