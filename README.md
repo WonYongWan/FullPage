@@ -166,6 +166,21 @@ footer의 경우 화면이 꽉 차지 않는 경우가 대부분 입니다. heig
 ```
 
 ## Javascript 관련 설명
+현재 module type만을 지원 합니다. 추후 text type을 지원할 예정입니다.
+```html
+<!-- 꼭 type="module"을 명시 해주세요 -->
+<script type="module" src="./js/main.js"></script>
+```
+
+### 당신이 사용할 수 있는 값
+pageCount, pageWrapTime
+```js
+// main.js
+import { fullPageEffect, fullResize, topBtnFlag, menuFlag, navFlag, specificFlag, pageCount, pageWrapTime } from './fullPage.js';
+```
+pageCount: 현재 위치하고 있는 페이지의 index값을 가져옵니다.
+pageWrapTime: 당신이 지정한 transition의 값을 가져옵니다. 
+
 
 # JP
 [製作のきっかけ](#製作のきっかけ)<br/>
@@ -328,3 +343,17 @@ footerの場合、画面がいっぱいにならない場合がほとんどで�
 ```
 
 ## Javascriptに関する説明
+現在module typeのみをサポートしています。 今後text typeに対応する予定です。
+```html
+<!-- 必ず type="module"を明示してください -->
+<script type="module" src="./js/main.js"></script>
+```
+
+### あなたが使える値
+pageCount, pageWrapTime
+```js
+// main.js
+import { fullPageEffect, fullResize, topBtnFlag, menuFlag, navFlag, specificFlag, pageCount, pageWrapTime } from './fullPage.js';
+```
+pageCount: 現在位置しているページのindex値を取得します。
+pageWrapTime: あなたが指定したtransitionの値を取得します。
