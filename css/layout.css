@@ -14,11 +14,9 @@ body .fp_page_wrap .fp_page {
   overflow: hidden;
   overflow-y: auto;
   box-sizing: border-box;
-}
-body .fp_page_wrap .fp_page .fp_scroll_box::-webkit-scrollbar {
-  display: none;
-}
-body .fp_page_wrap .fp_page .fp_scroll_box {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+body .fp_page_wrap .fp_page::-webkit-scrollbar {
+  display: none;
 }
