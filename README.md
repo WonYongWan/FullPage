@@ -15,7 +15,7 @@ current ver1.0.0
 
 ## HTML 작성법
 ### introduce
-#### fp_page_wrap는 필수. 나머지는 선택
+fp_page_wrap는 필수. 나머지는 선택
 ```html
 <!-- header -->
 <!-- data-fpnum 속성 & 값 지정 후 해당 버튼 클릭시 지정 된 값과 같은 페이지로 스크롤 이동. 0 부터 시작 -->
@@ -96,6 +96,7 @@ reset.css (기존의 reset.css가 있다면 제외)
 #### body안에 바로 넣을 경우
 기존에 있는 layout.css 그대로 사용.
 ```html
+<!-- example -->
 <body>
   <!-- header -->
   <ul class="fp_menu_wrap">...</ul>
@@ -109,6 +110,7 @@ reset.css (기존의 reset.css가 있다면 제외)
 ```
 #### body안을 한번 더 감쌀 경우
 ```html
+<!-- example -->
 <body>
   <div class="wrap">
     <!-- header -->
@@ -135,14 +137,14 @@ body {
 
 /* layout.scss */
 body {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .wrap {
-	height: calc(var(--vh, 1vh) * 100);
-	overflow: hidden;
-
-	.fp_page_wrap {...}
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+	
+  .fp_page_wrap {...}
 }
 ```
 #### footer height 값
