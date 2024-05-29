@@ -8,6 +8,7 @@ current ver1.0.0
 # KOR
 [제작 계기](#제작-계기)<br/>
 [HTML 작성법](#HTML-작성법)<br/>
+[CSS 관련 설명](#CSS-관련-설명)<br/>
 
 ## 제작 계기
 기존에 널리 알려져 있는 fullpage 라이브러리를 상업적으로 사용하기 위해서는 비용을 지불해야 하는 부분이 있었는데 이를 무료로 사용하고자 하는 취지에서 제작하게 되었습니다.
@@ -81,8 +82,19 @@ current ver1.0.0
 layout.css<br/>
 reset.css (기존의 reset.css가 있다면 제외)
 
+### layout.css 설정
+#### 시간 설정
+페이지 스크롤 시간을 자유롭게 설정할 수 있습니다.
+```css
+.fp_page_wrap {
+  /* transition을 설정 하세요 */
+  transition: .5s ease-in-out;
+}
+```
+
 ### layout.css 관련 이슈
 #### body안에 바로 넣을 경우
+기존에 있는 layout.css 그대로 사용.
 ```html
 <body>
   <!-- header -->
@@ -92,11 +104,62 @@ reset.css (기존의 reset.css가 있다면 제외)
   <!-- navigation -->
   <ul class="fp_nav_wrap">...</ul>
   <!-- top move button -->
-  <button type="button" class="fp_top_btn">text</button>
+  <button type="button" class="fp_top_btn">...</button>
 </body>
 ```
+#### body안을 한번 더 감쌀 경우
+```html
+<body>
+  <div class="wrap">
+    <!-- header -->
+    <ul class="fp_menu_wrap">...</ul>
+    <!-- fullpage -->
+    <div class="fp_page_wrap">...</div>
+    <!-- navigation -->
+    <ul class="fp_nav_wrap">...</ul>
+    <!-- top move button -->
+    <button type="button" class="fp_top_btn">...</button>
+  </div>
+</body>
+```
+layout.css 수정 또는 layout.scss 수정 후 컴파일
+```js
+/* layout.css */
+body {
+  overflow: hidden;
+}
+.wrap {
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+/* layout.scss */
+body {
+	overflow: hidden;
+}
+
+.wrap {
+	height: calc(var(--vh, 1vh) * 100);
+	overflow: hidden;
+
+	.fp_page_wrap {...}
+}
+```
+#### footer 이슈
+footer의 경우 화면이 꽉 차지 않는 경우가 대부분 입니다.
 ```css
-/* body안에 바로 넣을 경우 */
+/* layout.css */
+.fp_page_wrap footer.fp_page {
+  height: auto !important;
+}
+
+/* layout.css */
+.fp_page_wrap {
+  .fp_page {....}
+  footer.fp_page {
+    height: auto !important;
+  }
+}
 ```
 
 # JP
