@@ -23,14 +23,11 @@ body {
 			overflow: hidden;
 			overflow-y: auto;
 			box-sizing: border-box;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
 
-			.fp_scroll_box::-webkit-scrollbar {
+			&::-webkit-scrollbar {
 				display: none;
-			}
-
-			.fp_scroll_box {
-				-ms-overflow-style: none;
-				scrollbar-width: none;
 			}
 		}
 
