@@ -6,7 +6,7 @@ current ver1.0.0
 [JP](#JP)<br/>
 
 # KOR
-[제작 계기](#HTML-작성법)<br/>
+[제작 계기](#제작-계기)<br/>
 [HTML 작성법](#HTML-작성법)<br/>
 
 ## 제작 계기
