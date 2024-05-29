@@ -14,6 +14,7 @@ current ver1.0.0
 
 ## HTML 작성법
 ### introduce
+#### fp_page_wrap는 필수. 나머지는 선택
 ```html
 <!-- header -->
 <!-- data-fpnum 속성 & 값 지정 후 해당 버튼 클릭시 지정 된 값과 같은 페이지로 스크롤 이동. 0 부터 시작 -->
@@ -74,6 +75,28 @@ current ver1.0.0
   <!-- top move button -->
   <button type="button" class="fp_top_btn">text</button>
 </body>
+```
+## CSS 관련 설명
+### 필수 css파일
+layout.css<br/>
+reset.css (기존의 reset.css가 있다면 제외)
+
+### layout.css 관련 이슈
+#### body안에 바로 넣을 경우
+```html
+<body>
+  <!-- header -->
+  <ul class="fp_menu_wrap">...</ul>
+  <!-- fullpage -->
+  <div class="fp_page_wrap">...</div>
+  <!-- navigation -->
+  <ul class="fp_nav_wrap">...</ul>
+  <!-- top move button -->
+  <button type="button" class="fp_top_btn">text</button>
+</body>
+```
+```css
+/* body안에 바로 넣을 경우 */
 ```
 
 # JP
