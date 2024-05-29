@@ -1,4 +1,7 @@
 # FullPage
+<center><img src="./intro_images/fullPage_main.png" width="100%"/></center>
+
+## Version
 current ver1.0.0
 
 ## Language
