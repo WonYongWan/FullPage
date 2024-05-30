@@ -4,8 +4,8 @@
 current ver1.0.0
 
 ## 이 FullPage로 제작된 작업물들을 확인해 보세요!<br/>このFullPageで製作された作業物を確認してみてください！
-<a href="https://wonyongwan.github.io/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_240422/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_%EC%9D%B8%ED%8A%B8%EB%A1%9C/index.html "target="blank"><img src="./intro_images/fullPage_main.png" width="100%"/></a>
-<a href="https://wonyongwan.github.io/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_240422/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_%EC%9D%B8%ED%8A%B8%EB%A1%9C/index.html" "target="blank"><img src="./intro_images/fullPage01.png" width="100%"/></a>
+<a href="https://wonyongwan.github.io/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_240422/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_%EC%9D%B8%ED%8A%B8%EB%A1%9C/index.html" target="blank"><img src="./intro_images/fullPage_main.png" width="100%"/></a>
+<a href="https://wonyongwan.github.io/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_240422/%EB%AA%A8%EB%B9%84%EC%9C%84%EB%93%9C_kbsad_%EC%9D%B8%ED%8A%B8%EB%A1%9C/index.html" target="blank"><img src="./intro_images/fullPage01.png" width="100%"/></a>
 
 
 ## Language
