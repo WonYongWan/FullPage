@@ -170,7 +170,7 @@ footer의 경우 화면이 꽉 차지 않는 경우가 대부분 입니다. heig
   height: auto !important;
 }
 
-/* layout.css */
+/* layout.scss */
 .fp_page_wrap {
   .fp_page {....}
   footer.fp_page {
@@ -347,7 +347,7 @@ footerの場合、画面がいっぱいにならない場合がほとんどで�
   height: auto !important;
 }
 
-/* layout.css */
+/* layout.scss */
 .fp_page_wrap {
   .fp_page {....}
   footer.fp_page {
