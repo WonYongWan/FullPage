@@ -105,7 +105,14 @@ function valueReset() {
     }
   });
   $pageWrap.style.transform = `translateY(${pagePos}px)`;
-  $pages.forEach(elm => elm.classList.remove('now'));
+  $pages.forEach((elm, idx) => {
+    elm.classList.remove('now');
+    if(idx === pageCount) {
+      elm.scrollTop = 0;
+    } else {
+      setTimeout(() => elm.scrollTop = 0, pageWrapTime);
+    }
+  });
   setTimeout(() => $pages[0].classList.add('now'), pageWrapTime - 300);
   setTimeout(() => topBtnFlag = false, pageWrapTime);
 }
@@ -191,7 +198,14 @@ function menusClickEvent(menu) {
     }
 
     $pages[pageCount].classList.add('on');
-    $pages.forEach(elm => elm.classList.remove('now'));
+    $pages.forEach((elm, idx) => {
+      elm.classList.remove('now');
+      if(idx === pageCount) {
+        elm.scrollTop = 0;
+      } else {
+        setTimeout(() => elm.scrollTop = 0, pageWrapTime);
+      }
+    });
     setTimeout(() => { $pages[pageCount].classList.add('now') }, pageWrapTime - 300);
     topBtnOnOff(pageCount, pageLength);
     $pageWrap.style.transform = `translateY(-${pagePos}px)`;
@@ -235,7 +249,14 @@ function navsClickEvent(navNum) {
     }
 
     $pages[pageCount].classList.add('on');
-    $pages.forEach(elm => elm.classList.remove('now'));
+    $pages.forEach((elm, idx) => {
+      elm.classList.remove('now');
+      if(idx === pageCount) {
+        elm.scrollTop = 0;
+      } else {
+        setTimeout(() => elm.scrollTop = 0, pageWrapTime);
+      }
+    });
     setTimeout(() => { $pages[pageCount].classList.add('now') }, pageWrapTime - 300);
     topBtnOnOff(pageCount, pageLength);
     $pageWrap.style.transform = `translateY(-${pagePos}px)`;
