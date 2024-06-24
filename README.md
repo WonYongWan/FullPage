@@ -8,7 +8,7 @@
 - 탑 버튼 / トップ·ボタン
 
 ## Version
-current ver1.0.1
+current ver1.1.1
 
 ## 이 FullPage로 제작된 작업물들을 확인해 보세요!<br/>このFullPageで製作された作業物を確認してみてください！
 <a href="https://wonyongwan.github.io/fullpage_intro/index.html" target="blank"><img src="./intro_images/fullPage_main.png" width="100%"/></a>
