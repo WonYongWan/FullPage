@@ -265,7 +265,6 @@ function scrollBoxDetect(pageCount) {
 
 // wheelUp event
 function wheelUp() {
-  console.log(pageCount)
   let prevCount = pageCount;
   if (pageCount > 0) {
     if ($pages[pageCount]) {
@@ -298,7 +297,6 @@ function wheelUp() {
 
 // wheelDown event
 function wheelDown() {
-  console.log(pageCount)
   let prevCount = pageCount;
   if (pageCount < pageLength - 1) {
     if ($pages[pageCount]) {
