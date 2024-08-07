@@ -5,7 +5,7 @@ const $menus = document.querySelectorAll('.fp_menu');
 const $topBtn = document.querySelector('.fp_top_btn');
 const $navWrap = document.querySelector('.fp_nav_wrap');
 const $navs = document.querySelectorAll('.fp_nav');
-export const pageWrapTime = Number(getComputedStyle($pageWrap).transition.split(" ")[1].replace('s', '') * 1000);
+export const pageWrapTime = Number(getComputedStyle($pageWrap).transition.replace(/([^0-9.])/g, '') * 1000);
 const pageLength = $pages.length;
 
 // setting start page on class
@@ -108,7 +108,7 @@ function valueReset() {
   $pages.forEach((elm, idx) => {
     elm.classList.remove('now');
     if(idx === pageCount) {
-      elm.scrollTop = 0;
+      elm.scrollTo({top: 0, behavior: 'smooth'});
     } else {
       setTimeout(() => elm.scrollTop = 0, pageWrapTime);
     }
@@ -201,7 +201,7 @@ function menusClickEvent(menu) {
     $pages.forEach((elm, idx) => {
       elm.classList.remove('now');
       if(idx === pageCount) {
-        elm.scrollTop = 0;
+        elm.scrollTo({top: 0, behavior: 'smooth'});
       } else {
         setTimeout(() => elm.scrollTop = 0, pageWrapTime);
       }
@@ -252,7 +252,7 @@ function navsClickEvent(navNum) {
     $pages.forEach((elm, idx) => {
       elm.classList.remove('now');
       if(idx === pageCount) {
-        elm.scrollTop = 0;
+        elm.scrollTo({top: 0, behavior: 'smooth'});
       } else {
         setTimeout(() => elm.scrollTop = 0, pageWrapTime);
       }
@@ -268,8 +268,9 @@ function navsClickEvent(navNum) {
 function scrollBoxDetect(pageCount) {
   const $scrollBox = $pages[pageCount];
   if (!$scrollBox) return;
-  let scrollPos = Math.round($scrollBox.scrollTop);
+  let scrollPos = Math.ceil($scrollBox.scrollTop);
   let scrollBottom = $scrollBox.scrollHeight - $scrollBox.clientHeight;
+  if (scrollBottom - scrollPos <= 1) scrollPos = scrollBottom;
 
   if (scrollBottom === 0) {
     return 'null';
